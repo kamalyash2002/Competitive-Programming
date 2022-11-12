@@ -6,13 +6,23 @@ typedef long long int ll;
 void solve(){
     int size;
     cin >> size;
-    int arr[size];
-    for (int i = 0; i < size; i++)
+    string s;
+    cin >> s;
+    int mid = (size / 2);
+    int count = 0;
+    for (int i = 0; i < mid; i++)
     {
-        cin >> arr[i];
+        if(s[i]==s[i+(size/2)]){
+            count++;
+        }
     }
-    int max = *max_element(arr, arr + size);
-    cout << max << endl;
+    // cout << count << endl;
+    if ((count) == (size / 2) ){
+        cout << "Yes" << endl;
+    }
+    else{
+        cout << "No" << endl;
+    }
 }
 int main(){         
 	speed

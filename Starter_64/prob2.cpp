@@ -4,14 +4,15 @@ using namespace std;
 typedef long long int ll; 
 
 void solve(){
-	ll x;
-    cin>>x;
-    if(x>=2000){
-        cout << "Yes" << endl;
+    int size;
+    cin >> size;
+    int arr[size];
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
     }
-    else{
-        cout<<"No"<<endl;
-    }
+    int max = *max_element(arr, arr + size);
+    cout << max << endl;
 }
 int main(){         
 	speed
